@@ -2,5 +2,8 @@
 
 ## O presente projeto foi elaborado utilizando a plataforma do QT CREATOR para composição de nota da disciplina técnicas de programação 2019.2
 
-####O projeto tem como objetivo calcular o consumo de energia a partir do cadastro de aparelhos elétricos de uma unidade de consumo.
+#### O projeto tem como objetivo calcular o consumo de energia a partir do cadastro de aparelhos elétricos de uma unidade consumidora.
+
+![GitHub Logo](/home/ifpb/Pictures/index.jpeg )
+format: ![Alt Text](url)
 
