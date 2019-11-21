@@ -4,6 +4,6 @@
 
 #### O projeto tem como objetivo calcular o consumo de energia a partir do cadastro de aparelhos elétricos de uma unidade consumidora.
 
-![GitHub Logo](/home/ifpb/Pictures/index.jpeg )
+![GitHub Logo](imagens/index.jpeg )
 format: ![Alt Text](url)
 
