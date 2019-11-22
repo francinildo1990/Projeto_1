@@ -9,14 +9,23 @@
 ## Algoritimo
 #### 1. Cadastrar os equipamentos elétricos da unidade de consumo
 
-####     Identificação do equipamento
-####     Potência do equipamento
-####     Tempo de uso Diário do equipamento
-####     Tarifa cobrada pela distribuidora na região
-####     Taxa de iluminação pública
+####     -Identificação do equipamento
+####     -Potência do equipamento
+####     -Tempo de uso Diário do equipamento
+####     -Tarifa cobrada pela distribuidora na região
+####     -Taxa de iluminação pública
 
 #### 2. Calcular uma estimativa da fatura do mês
 
 #### 3. Verificar se está dentro de uma faixa próxima da sua conta de energia real
 
+####     -Caso o resultado obtido esteja próximo do real;
+####          -Ótimo sua instalação elétrica e seus equipamentos estão em perfeito estado de funcionamento
 
+####     -Caso o resultado obtido esteja distante do real;
+####          -Refaça os cálculos você pode ter errado algum dado dos equipamentos
+
+####     -Caso o resultado obtido continue distante do real;
+####          -Faça uma revisão no circuito elétrico ou verifique o estado dos seus equipamentos.
+
+## Fim do Algoritimo
