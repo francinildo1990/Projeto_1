@@ -4,7 +4,7 @@
 
 #### O projeto tem como objetivo calcular o consumo de energia a partir das informações provenientes do cadastro dos equipamentos elétricos de uma unidade de consumo.
 
-![GitHub Logo](imagens/index.jpeg )
+![GitHub Logo](imagens/app.JPG )
 
 ## Algoritimo
 ### Passo 1. Cadastrar os equipamentos elétricos da unidade de consumo
