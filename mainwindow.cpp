@@ -91,7 +91,7 @@ void MainWindow::on_ButtonConsumoTotal_clicked()
     for(int i = 0; i<energia.size();i++){
         temp+=energia[i];
     }
-    b = (temp);
+    b = (temp*MES);
 
  ui->Label_Consumo_total->setText((QString::number(b)));
 }
