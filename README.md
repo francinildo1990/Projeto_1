@@ -4,7 +4,8 @@
 
 #### O projeto tem como objetivo calcular o consumo de energia a partir das informações provenientes do cadastro dos equipamentos elétricos de uma unidade de consumo.
 
-![GitHub Logo](imagens/app.JPG )
+
+
 
 ## Algoritimo
 ### Passo 1. Cadastrar os equipamentos elétricos da unidade de consumo
@@ -14,6 +15,8 @@
 ####     -Tempo de uso diário do equipamento
 ####     -Tarifa cobrada pela distribuidora na região
 ####     -Taxa de iluminação pública
+
+![GitHub Logo](imagens/APP.1.JPG )
 
 ### Passo  2. Calcular uma estimativa da fatura do mês
 
@@ -37,6 +40,8 @@
    ####          -A maior potência da carga
    ####          -A menor potência da carga
    ####          -A potência média
+   
+   ![GitHub Logo](imagens/DADOS.JPG )
    
   ####          -Por fim o app é direcionado para quem deseja obter um maior controle sobre a conta de energia, evitando assim dispedicíos de energia.
             
