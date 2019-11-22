@@ -16,9 +16,9 @@
 ####     -Tarifa cobrada pela distribuidora na região
 ####     -Taxa de iluminação pública
 
-####     A conta de energia é faturada calculando o consumo mensal em KW/h, exemplificando se você utiliza um equipamento com potência de 60 W durante 60 min, você terá consumido 0,06 KW/h essa é a potência consumida pelo seu aparelho, terá que ser multiplicada pelo valor do KW/h cobrado em sua região, resumindo obedece a seguinte fórmula;
+####     A conta de energia é faturada calculando o consumo mensal em KW/h, exemplificando se você utiliza um equipamento com potência de 60 W durante 60 min, você terá consumido 0,06 KW/h que é a potência consumida pelo seu aparelho, tal potência terá que ser multiplicada pelo valor do KW/h cobrado em sua região, resumindo obedece a seguinte fórmula;
 
-##   E = (KW * (TEMPO DE CONSUMO) * (VALOR DO KW/h)) + TAXA DE ILUMINAÇÃO ; 
+###   E = (KW * (TEMPO DE CONSUMO) * (VALOR DO KW/h)) + TAXA DE ILUMINAÇÃO ; 
 
 ![GitHub Logo](imagens/APP.1.JPG )
 
