@@ -1,23 +1,23 @@
 #  Calculadora para consumo de energia
 
-## O presente projeto foi elaborado utilizando a plataforma do QT CREATOR para composição de nota da disciplina técnicas de programação 2019.2
+## O presente projeto foi elaborado utilizando a plataforma do QT CREATOR, tem como finalidade a composição de nota da disciplina técnicas de programação 2019.2
 
 #### O projeto tem como objetivo calcular o consumo de energia a partir do cadastro de aparelhos elétricos de uma unidade consumidora.
 
 ![GitHub Logo](imagens/index.jpeg )
 
 ## Algoritimo
-### 1. Cadastrar os equipamentos elétricos da unidade de consumo
+### Passo 1. Cadastrar os equipamentos elétricos da unidade de consumo
 
 ####     -Identificação do equipamento
 ####     -Potência do equipamento
-####     -Tempo de uso Diário do equipamento
+####     -Tempo de uso diário do equipamento
 ####     -Tarifa cobrada pela distribuidora na região
 ####     -Taxa de iluminação pública
 
-### 2. Calcular uma estimativa da fatura do mês
+### Passo  2. Calcular uma estimativa da fatura do mês
 
-### 3. Verificar se está dentro de uma faixa próxima da sua conta de energia real
+### Passo 3. Verificar se está dentro de uma faixa próxima da sua conta de energia real
 
 ####     -Caso o resultado obtido esteja próximo do real;
 ####          -Ótimo sua instalação elétrica e seus equipamentos estão em perfeito estado de funcionamento
@@ -36,5 +36,5 @@
    ####          -A menor potência da carga
    ####          -A potência média da carga
    
-  ####          -Por fim o app é direcionado para quem deseja obter um maior controle sobre a conta de energia, evitando dispercíos.
+  ####          -Por fim o app é direcionado para quem deseja obter um maior controle sobre a conta de energia, evitando assim dispercíos.
             
