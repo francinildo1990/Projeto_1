@@ -6,3 +6,5 @@
 
 ![GitHub Logo](imagens/index.jpeg )
 
+## Algoritimo
+#### 1. Cadastrar equipamentos elétricos 
