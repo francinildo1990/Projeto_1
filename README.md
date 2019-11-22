@@ -2,7 +2,7 @@
 
 ## O presente projeto foi elaborado utilizando a plataforma do QT CREATOR, e tem como finalidade a composição de nota da disciplina técnicas de programação 2019.2
 
-#### O projeto tem como objetivo calcular o consumo de energia a partir das informações provenientes do cadastro dos equipamentos elétricos de uma unidade de consumo.
+### O projeto tem como objetivo calcular o consumo de energia a partir das informações provenientes do cadastro dos equipamentos elétricos de uma unidade de consumo.
 
 
 
@@ -21,6 +21,8 @@
 ### Passo  2. Calcular uma estimativa da fatura do mês
 
 ####     -Resultado na tela
+
+![GitHub Logo](imagens/CONSUMO.JPG )
 
 ### Passo 3. Verificar se está dentro de uma faixa próxima da sua conta de energia real
 
