@@ -7,7 +7,7 @@
 ![GitHub Logo](imagens/index.jpeg )
 
 ## Algoritimo
-#### 1. Cadastrar os equipamentos elétricos da unidade de consumo
+### 1. Cadastrar os equipamentos elétricos da unidade de consumo
 
 ####     -Identificação do equipamento
 ####     -Potência do equipamento
@@ -15,9 +15,9 @@
 ####     -Tarifa cobrada pela distribuidora na região
 ####     -Taxa de iluminação pública
 
-#### 2. Calcular uma estimativa da fatura do mês
+### 2. Calcular uma estimativa da fatura do mês
 
-#### 3. Verificar se está dentro de uma faixa próxima da sua conta de energia real
+### 3. Verificar se está dentro de uma faixa próxima da sua conta de energia real
 
 ####     -Caso o resultado obtido esteja próximo do real;
 ####          -Ótimo sua instalação elétrica e seus equipamentos estão em perfeito estado de funcionamento
@@ -29,3 +29,12 @@
 ####          -Faça uma revisão no circuito elétrico ou verifique o estado dos seus equipamentos.
 
 ## Fim do Algoritimo
+
+###     -Na segunda aba está localizado os dados que mostram as estatísticas no processo
+  ####          -Tais como:
+   ####          -A maior potência da carga
+   ####          -A menor potência da carga
+   ####          -A potência média da carga
+   
+  ####          -Por fim o app é direcionado para quem deseja obter um maior controle sobre a conta de energia, evitando dispercíos.
+            
