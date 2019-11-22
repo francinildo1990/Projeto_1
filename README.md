@@ -45,5 +45,7 @@
    
    ![GitHub Logo](imagens/DADOS.JPG )
    
-  ####          -Por fim o app é direcionado para quem deseja obter um maior controle sobre a conta de energia, evitando assim dispedicíos de energia.
+  ####          -Por fim o app é direcionado para aqueles que desejam obter um maior controle sobre a conta de energia, evitando assim o seu dispedicío.
+  
+ ## Obrigado!
             
