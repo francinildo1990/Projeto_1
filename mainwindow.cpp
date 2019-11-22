@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "equipamento.h"
 #include "grupo_equipamento.h"
+#define MES 31
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -85,12 +86,14 @@ void MainWindow::on_ButtonOrdenarPorPotencia_clicked()
 void MainWindow::on_ButtonConsumoTotal_clicked()
 {
     Equipamento a;
+    float b;
     float temp;
     for(int i = 0; i<energia.size();i++){
         temp+=energia[i];
     }
+    b = (temp);
 
- ui->Label_Consumo_total->setText((QString::number(temp))+(QString::number(a.getIluminacao())));
+ ui->Label_Consumo_total->setText((QString::number(b)));
 }
 
 void MainWindow::on_actionSalvar_triggered()

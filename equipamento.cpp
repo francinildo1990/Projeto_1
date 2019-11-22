@@ -1,5 +1,6 @@
 #include "equipamento.h"
 
+
 Equipamento::Equipamento()
 {
 
