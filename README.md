@@ -7,4 +7,16 @@
 ![GitHub Logo](imagens/index.jpeg )
 
 ## Algoritimo
-#### 1. Cadastrar equipamentos elétricos 
+#### 1. Cadastrar os equipamentos elétricos da unidade de consumo
+
+####     Identificação do equipamento
+####     Potência do equipamento
+####     Tempo de uso Diário do equipamento
+####     Tarifa cobrada pela distribuidora na região
+####     Taxa de iluminação pública
+
+#### 2. Calcular uma estimativa da fatura do mês
+
+#### 3. Verificar se está dentro de uma faixa próxima da sua conta de energia real
+
+
