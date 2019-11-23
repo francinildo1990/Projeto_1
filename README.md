@@ -2,7 +2,7 @@
 
 ## O presente projeto foi elaborado utilizando a plataforma do QT CREATOR, e tem como finalidade a composição de nota da disciplina técnicas de programação 2019.2
 
-#### O projeto tem como objetivo calcular o consumo de energia a partir das informações provenientes do cadastro dos equipamentos elétricos de uma unidade de consumo.
+### O projeto tem como objetivo calcular o consumo de energia a partir das informações provenientes do cadastro de equipamentos elétricos de uma unidade de consumo.
 
 
 
@@ -16,11 +16,20 @@
 ####     -Tarifa cobrada pela distribuidora na região
 ####     -Taxa de iluminação pública
 
+####     A conta de energia é faturada calculando o consumo mensal em KW/h, exemplificando se você utiliza um equipamento com potência de 60 W durante 60 min, você terá consumido 0,06 KW/h que é a potência consumida pelo seu aparelho, tal potência terá que ser multiplicada pelo valor do KW/h cobrado em sua região, resumindo obedece a seguinte fórmula;
+
+###   E = (KW * (TEMPO DE CONSUMO) * (VALOR DO KW/h)) + TAXA DE ILUMINAÇÃO ; 
+
 ![GitHub Logo](imagens/APP.1.JPG )
 
 ### Passo  2. Calcular uma estimativa da fatura do mês
 
-####     -Resultado na tela
+
+#### A estimativa da fatura tem como finalidade fornecer uma base de informações que permitirá ao usúario uma tomada de decisão, a parti de uma análise dessas informações pode se planejar uma ecônomia de uso dos aparelhos, ou a substituição visando uma maior eficiência de consumo.
+
+####     -Resultado do consumo na tela
+
+![GitHub Logo](imagens/CONSUMO.JPG )
 
 ### Passo 3. Verificar se está dentro de uma faixa próxima da sua conta de energia real
 
@@ -35,6 +44,8 @@
 
 ## Fim do Algoritimo
 
+####  O programa fornece algumas funções aos usuários, além de cadastrar vários aparelhos, ele poderá deletar aparelhos da lista ou banco de dados, poderá ordenar a lista em ordem alfabética ou segundo a potência do aparelho.
+
 ###     -Na segunda aba está localizado os dados que mostram as estatísticas do processo
   ####          -Tais como:
    ####          -A maior potência da carga
@@ -43,5 +54,7 @@
    
    ![GitHub Logo](imagens/DADOS.JPG )
    
-  ####          -Por fim o app é direcionado para quem deseja obter um maior controle sobre a conta de energia, evitando assim dispedicíos de energia.
+  ####          -Por fim o app é direcionado para aqueles que desejam obter um maior controle sobre a conta de energia, evitando assim o seu dispedicío.
+  
+ ## Obrigado!
             
