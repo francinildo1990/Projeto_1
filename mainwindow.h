@@ -35,6 +35,10 @@ private slots:
 
     void on_actionCarregar_triggered();
 
+    void on_ButtonRemover_clicked();
+
+
+
 private:
     Ui::MainWindow *ui;
 
@@ -42,6 +46,8 @@ private:
     void atualizarEstatisticas();
     void inserirNaTabela(Equipamento a, int linha);
     float calcularEnergia();
+    void removeRow(int row);
+     QList <QString> lista;
      QVector<float> energia;
 };
 #endif // MAINWINDOW_H

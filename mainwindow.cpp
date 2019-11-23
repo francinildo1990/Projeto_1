@@ -54,7 +54,7 @@ void MainWindow::inserirNaTabela(Equipamento a, int linha){
     ui->tabela->setItem(linha,1,new QTableWidgetItem(QString::number(a.getPotencia())));
     ui->tabela->setItem(linha,2,new QTableWidgetItem(QString::number(a.getTempo())));
     energia.push_back(a.calcularEnergia());
-
+    lista.push_back(a.getEquipamento());
 }
 
 void MainWindow::atualizarEstatisticas(){
@@ -115,3 +115,21 @@ void MainWindow::on_actionCarregar_triggered()
     }
     atualizarEstatisticas();
 }
+
+void MainWindow::on_ButtonRemover_clicked()
+{
+       Equipamento a;
+
+    for(int i=0; i<casa.size(); i++){
+
+        // if(ui->inputRemover->text() == lista[i]){
+
+        ui->tabela->removeRow(i);
+        inserirNaTabela(casa[i],i);
+         atualizarEstatisticas();
+}
+
+
+}
+
+
