@@ -49,5 +49,6 @@ private:
     void removeRow(int row);
      QList <QString> lista;
      QVector<float> energia;
+     Equipamento cadastro;
 };
 #endif // MAINWINDOW_H
