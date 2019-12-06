@@ -2,9 +2,9 @@
 #include "ui_mainwindow.h"
 #include "equipamento.h"
 #include "grupo_equipamento.h"
-#include<QString>
-#include<QMap>
-#include<QMessageBox>
+
+
+
 #define MES 31
 
 MainWindow::MainWindow(QWidget *parent)
@@ -23,21 +23,25 @@ MainWindow::~MainWindow()
 void MainWindow::on_ButtonCadastrarEquipamento_clicked()
 {
 
-    QString temp;
-    temp = ui-> inputEquipamento->text();
-
-
+    QString nome;
+    float pot;
+    float tempo;
+    float tarifa;
+    nome = ui-> inputEquipamento->text();
+    pot = ui-> inputPotencia->text().toFloat();
+    tempo = ui-> inputTempo->text().toFloat();
+    tarifa = ui-> inputTarifa->text().toFloat();
 
 //for(int i = 0; i> lista.size(); i++){
 
-    if(lista.find(temp)!=lista.end()){
+    if(lista.find(nome)!=lista.end()){
         qDebug()<<"Equipamento já existe"<<endl;
         QMessageBox::warning(this,"Alerta","Equipamento já existe");
     }
     else{
-        if(temp.size()<= 3){
-            qDebug()<<"Nome Inválido"<<endl;
-             QMessageBox::warning(this,"Alerta","Nome inválido");
+        if(nome.size()<= 3 || pot <= 0 || tempo <= 0 || tarifa <= 0 ){
+            qDebug()<<"Dado Inválido"<<endl;
+             QMessageBox::warning(this,"Alerta","Dado inválido");
         }
         else{
     cadastro.setEquipamento(ui->inputEquipamento->text());
@@ -146,7 +150,8 @@ void MainWindow::on_ButtonRemover_clicked()
 
          ui->tabela->removeRow(i);
          ui->Label_Consumo_total->clear();
-        // casa.delete(casa[i]);
+         //casa.remover(i);
+
 
         atualizarEstatisticas();
 }
@@ -154,4 +159,18 @@ void MainWindow::on_ButtonRemover_clicked()
 
 }
 
+
+
+void MainWindow::on_tabela_cellDoubleClicked(int row, int column) // Bloquear Tabela
+{
+    if(column == 0){
+            QMessageBox::StandardButton resp = QMessageBox::warning(this, "Alerta", "Você não pode alterar cadastro!");
+            }
+    if(column == 1){
+            QMessageBox::StandardButton resp = QMessageBox::warning(this, "Alerta", "Você não pode alterar cadastro!");
+            }
+    if(column == 2){
+            QMessageBox::StandardButton resp = QMessageBox::warning(this, "Alerta", "Você não pode alterar cadastro!");
+            }
+        }
 

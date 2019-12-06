@@ -6,6 +6,8 @@
 #include<algorithm>
 #include<equipamento.h>
 #include <QFile>
+#include <QStringList>
+#include <QObject>
 
 
 class Grupo_Equipamento
@@ -22,6 +24,7 @@ public:
     void inserirCadastro(Equipamento a);
     void ordenarPorNome();
     void ordenarPorPotencia();
+    void remover(int i);
     int size();
     void salvarDados(QString file);
     void carregarDados(QString file);

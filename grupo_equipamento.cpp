@@ -91,3 +91,8 @@ void Grupo_Equipamento::carregarDados(QString file)
     arquivo.close();
 
 }
+
+void Grupo_Equipamento::remover(int i){
+
+    casa.erase(casa.begin()+i);
+}

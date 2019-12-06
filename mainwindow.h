@@ -10,6 +10,11 @@
 #include<QString>
 #include<QVector>
 #include<QMap>
+#include <algorithm>
+#include <QFile>
+#include <QStringList>
+#include<QMessageBox>
+#include <QObject>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -39,6 +44,8 @@ private slots:
     void on_ButtonRemover_clicked();
 
 
+
+    void on_tabela_cellDoubleClicked(int row, int column);
 
 private:
     Ui::MainWindow *ui;
