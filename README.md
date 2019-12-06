@@ -29,7 +29,7 @@
 
 ####     -Resultado do consumo na tela
 
-![GitHub Logo](imagens/CONSUMO.JPG )
+![GitHub Logo](imagens/CALCULAR_CONSUMO.JPG )
 
 ### Passo 3. Verificar se está dentro de uma faixa próxima da sua conta de energia real
 
