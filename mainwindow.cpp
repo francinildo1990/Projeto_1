@@ -2,6 +2,9 @@
 #include "ui_mainwindow.h"
 #include "equipamento.h"
 #include "grupo_equipamento.h"
+#include<QString>
+#include<QMap>
+#include<QMessageBox>
 #define MES 31
 
 MainWindow::MainWindow(QWidget *parent)
@@ -23,10 +26,20 @@ void MainWindow::on_ButtonCadastrarEquipamento_clicked()
     QString temp;
     temp = ui-> inputEquipamento->text();
 
-    if(temp==cadastro.getEquipamento()){
+
+
+//for(int i = 0; i> lista.size(); i++){
+
+    if(lista.find(temp)!=lista.end()){
         qDebug()<<"Equipamento já existe"<<endl;
+        QMessageBox::warning(this,"Alerta","Equipamento já existe");
     }
     else{
+        if(temp.size()<= 3){
+            qDebug()<<"Nome Inválido"<<endl;
+             QMessageBox::warning(this,"Alerta","Nome inválido");
+        }
+        else{
     cadastro.setEquipamento(ui->inputEquipamento->text());
     cadastro.setPotencia(ui->inputPotencia->text().toFloat());
     cadastro.setTempo(ui->inputTempo->text().toFloat());
@@ -39,7 +52,10 @@ void MainWindow::on_ButtonCadastrarEquipamento_clicked()
 
   casa.inserirCadastro(cadastro);
   atualizarEstatisticas();
+        }
+
     }
+
 
     ui->inputEquipamento->clear();
 
@@ -60,7 +76,7 @@ void MainWindow::inserirNaTabela(Equipamento a, int linha){
     ui->tabela->setItem(linha,1,new QTableWidgetItem(QString::number(a.getPotencia())));
     ui->tabela->setItem(linha,2,new QTableWidgetItem(QString::number(a.getTempo())));
     energia.push_back(a.calcularEnergia());
-    lista.push_back(a.getEquipamento());
+    lista[a.getEquipamento()]= a.getEquipamento();
 }
 
 void MainWindow::atualizarEstatisticas(){
@@ -130,6 +146,7 @@ void MainWindow::on_ButtonRemover_clicked()
 
          ui->tabela->removeRow(i);
          ui->Label_Consumo_total->clear();
+        // casa.delete(casa[i]);
 
         atualizarEstatisticas();
 }

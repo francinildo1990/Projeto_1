@@ -9,6 +9,7 @@
 #include <QFileDialog>
 #include<QString>
 #include<QVector>
+#include<QMap>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -47,7 +48,7 @@ private:
     void inserirNaTabela(Equipamento a, int linha);
     float calcularEnergia();
     void removeRow(int row);
-     QList <QString> lista;
+     QMap <QString,QString> lista;
      QVector<float> energia;
      Equipamento cadastro;
 };
