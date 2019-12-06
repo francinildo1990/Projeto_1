@@ -19,24 +19,19 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_ButtonCadastrarEquipamento_clicked()
 {
-    Equipamento cadastro;
 
+    QString temp;
+    temp = ui-> inputEquipamento->text();
+
+    if(temp==cadastro.getEquipamento()){
+        qDebug()<<"Equipamento já existe"<<endl;
+    }
+    else{
     cadastro.setEquipamento(ui->inputEquipamento->text());
     cadastro.setPotencia(ui->inputPotencia->text().toFloat());
     cadastro.setTempo(ui->inputTempo->text().toFloat());
     cadastro.setIluminacao(ui->inputIluminacao->text().toFloat());
     cadastro.setTarifa(ui->inputTarifa->text().toFloat());
-
-
-  ui->inputEquipamento->clear();
-
-  ui->inputPotencia->clear();
-
-  ui->inputTempo->clear();
-
-  ui->inputIluminacao->clear();
-
-  ui->inputTarifa->clear();
 
   int quantidade_linhas = ui->tabela->rowCount();
   ui->tabela->insertRow(quantidade_linhas);
@@ -44,6 +39,17 @@ void MainWindow::on_ButtonCadastrarEquipamento_clicked()
 
   casa.inserirCadastro(cadastro);
   atualizarEstatisticas();
+    }
+
+    ui->inputEquipamento->clear();
+
+    ui->inputPotencia->clear();
+
+    ui->inputTempo->clear();
+
+    ui->inputIluminacao->clear();
+
+    ui->inputTarifa->clear();
 
 }
 
@@ -85,13 +91,14 @@ void MainWindow::on_ButtonOrdenarPorPotencia_clicked()
 
 void MainWindow::on_ButtonConsumoTotal_clicked()
 {
-    Equipamento a;
+
     float b;
-    float temp;
+    float temp = 0;
     for(int i = 0; i<energia.size();i++){
         temp+=energia[i];
     }
-    b = (temp*MES);
+    b = temp*MES+cadastro.getIluminacao();
+    qDebug()<<temp<<MES<<cadastro.getIluminacao();
 
  ui->Label_Consumo_total->setText((QString::number(b)));
 }
@@ -118,15 +125,13 @@ void MainWindow::on_actionCarregar_triggered()
 
 void MainWindow::on_ButtonRemover_clicked()
 {
-       Equipamento a;
 
-    for(int i=0; i<casa.size(); i++){
+       for(int i=0; i<casa.size(); i++){
 
-        // if(ui->inputRemover->text() == lista[i]){
+         ui->tabela->removeRow(i);
+         ui->Label_Consumo_total->clear();
 
-        ui->tabela->removeRow(i);
-        inserirNaTabela(casa[i],i);
-         atualizarEstatisticas();
+        atualizarEstatisticas();
 }
 
 
