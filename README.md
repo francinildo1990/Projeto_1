@@ -45,7 +45,7 @@
 ## Fim do Algoritimo
 
 ####  O programa fornece algumas funções aos usuários, além de cadastrar vários aparelhos, ele poderá deletar aparelhos da lista, poderá ordenar a lista em ordem alfabética ou segundo a potência do aparelho.
-![GitHub Logo](imagens/removerFinal.JPG )
+![GitHub Logo](imagens/RemoverFinal.JPG )
 
 ###     -Na segunda aba está localizado os dados que mostram as estatísticas do processo
   ####          -Tais como:
