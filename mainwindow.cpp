@@ -5,7 +5,7 @@
 
 
 
-#define MES 31
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -20,26 +20,28 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::on_ButtonCadastrarEquipamento_clicked()
+void MainWindow::on_ButtonCadastrarEquipamento_clicked() //Botão para cadastrar equipamento
 {
 
     QString nome;
     float pot;
+    float dias;
     float tempo;
     float tarifa;
     nome = ui-> inputEquipamento->text();
     pot = ui-> inputPotencia->text().toFloat();
     tempo = ui-> inputTempo->text().toFloat();
     tarifa = ui-> inputTarifa->text().toFloat();
+    dias = ui-> Quantidade_dias->text().toFloat();
 
-//for(int i = 0; i> lista.size(); i++){
 
-    if(lista.find(nome)!=lista.end()){
+
+    if(lista.find(nome)!=lista.end()){            //Verifica se o equipamento já foi cadastro
         qDebug()<<"Equipamento já existe"<<endl;
         QMessageBox::warning(this,"Alerta","Equipamento já existe");
     }
     else{
-        if(nome.size()<= 3 || pot <= 0 || tempo <= 0 || tarifa <= 0 ){
+        if(nome.size()<= 3 || pot <= 0 || tempo <= 0 || tarifa <= 0 || dias <= 0){  //Verificação dos dados
             qDebug()<<"Dado Inválido"<<endl;
              QMessageBox::warning(this,"Alerta","Dado inválido");
         }
@@ -61,7 +63,7 @@ void MainWindow::on_ButtonCadastrarEquipamento_clicked()
     }
 
 
-    ui->inputEquipamento->clear();
+    ui->inputEquipamento->clear(); // Limpa esses campos
 
     ui->inputPotencia->clear();
 
@@ -79,8 +81,10 @@ void MainWindow::inserirNaTabela(Equipamento a, int linha){
     ui->tabela->setItem(linha,0,new QTableWidgetItem(a.getEquipamento()));
     ui->tabela->setItem(linha,1,new QTableWidgetItem(QString::number(a.getPotencia())));
     ui->tabela->setItem(linha,2,new QTableWidgetItem(QString::number(a.getTempo())));
-    energia.push_back(a.calcularEnergia());
-    lista[a.getEquipamento()]= a.getEquipamento();
+
+    energia.push_back(a.calcularEnergia());         // Vector auxiliador no calculo da fatura
+    lista[a.getEquipamento()]= a.getEquipamento();  // Map auxiliador na verificação do equipamento
+    equipamentos.push_back(a.getEquipamento());     // Vector auxiliador na remoção de equipamentos
 }
 
 void MainWindow::atualizarEstatisticas(){
@@ -90,7 +94,7 @@ void MainWindow::atualizarEstatisticas(){
     ui->PotenciaMedia->setText(QString::number(casa.getPotenciaMedia()));
 }
 
-void MainWindow::on_ButtonOrdenarPorNome_clicked()
+void MainWindow::on_ButtonOrdenarPorNome_clicked() // ordenar por nome
 {
     casa.ordenarPorNome();
     ui->tabela->clearContents();
@@ -99,7 +103,7 @@ void MainWindow::on_ButtonOrdenarPorNome_clicked()
     }
 }
 
-void MainWindow::on_ButtonOrdenarPorPotencia_clicked()
+void MainWindow::on_ButtonOrdenarPorPotencia_clicked() // ordenar por potência
 {
     casa.ordenarPorPotencia();
     ui->tabela->clearContents();
@@ -109,28 +113,28 @@ void MainWindow::on_ButtonOrdenarPorPotencia_clicked()
 }
 
 
-void MainWindow::on_ButtonConsumoTotal_clicked()
+void MainWindow::on_ButtonConsumoTotal_clicked() // Calcula a fatura total
 {
-
+    float dias = ui ->Quantidade_dias->text().toFloat();
     float b;
     float temp = 0;
     for(int i = 0; i<energia.size();i++){
         temp+=energia[i];
     }
-    b = temp*MES+cadastro.getIluminacao();
-    qDebug()<<temp<<MES<<cadastro.getIluminacao();
+    b = temp*dias+cadastro.getIluminacao();
+    qDebug()<<temp<<dias<<cadastro.getIluminacao();
 
  ui->Label_Consumo_total->setText((QString::number(b)));
 }
 
-void MainWindow::on_actionSalvar_triggered()
+void MainWindow::on_actionSalvar_triggered() // salvar no arquivo
 {
     QString filename;
     filename = QFileDialog::getSaveFileName(this,"Salvar Arquivo","","*.csv");
     casa.salvarDados(filename);
 }
 
-void MainWindow::on_actionCarregar_triggered()
+void MainWindow::on_actionCarregar_triggered() // carregar do arquivo
 {
     QString filename;
     filename = QFileDialog::getOpenFileName(this, "Abrir Arquivo","","*.csv");
@@ -143,20 +147,37 @@ void MainWindow::on_actionCarregar_triggered()
     atualizarEstatisticas();
 }
 
-void MainWindow::on_ButtonRemover_clicked()
+void MainWindow::on_ButtonRemover_clicked() //Remover item da tabela e do vector casa
 {
+      QString nome = ui-> remover ->text();
 
-       for(int i=0; i<casa.size(); i++){
+       for(int i=0; i<equipamentos.size(); i++){
+
+
+           if(equipamentos[i]==nome)
+            {
 
          ui->tabela->removeRow(i);
          ui->Label_Consumo_total->clear();
-         //casa.remover(i);
+         casa.remover(i);
+         it = lista.find(nome);
+         lista.erase(it);
+         ui->remover->clear();
+         equipamentos.erase(equipamentos.begin()+ i);
+         energia.erase(energia.begin()+ i);
 
+            }
 
-        atualizarEstatisticas();
+        if(casa.size()==0){
+
+            ui->MaiorPotencia->clear();  // limpar estatísticas
+            ui->MenorPotencia->clear();
+            ui->PotenciaMedia->clear();
+
+            lista.clear();
+        }
+    atualizarEstatisticas();
 }
-
-
 }
 
 

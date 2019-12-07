@@ -5,20 +5,20 @@ Grupo_Equipamento::Grupo_Equipamento()
 
 }
 
-double Grupo_Equipamento::getMaiorPotencia(){
+float Grupo_Equipamento::getMaiorPotencia(){  // calcula maior potência
 
    Equipamento *a = std::max_element(casa.begin(),casa.end(),compararPorPotencia);
     return  a->getPotencia();
 }
 
-double Grupo_Equipamento::getMenorPotencia(){
+float Grupo_Equipamento::getMenorPotencia(){ // calcula menor potência
 
     Equipamento *a = std::min_element(casa.begin(),casa.end(),compararPorPotencia);
     return  a->getPotencia();
 }
 
-double Grupo_Equipamento::getPotenciaMedia(){
-    double media = 0;
+float Grupo_Equipamento::getPotenciaMedia(){ // calcula potência média
+    float media = 0;
     for(auto e : casa){
         media+=e.getPotencia();
     }
@@ -56,7 +56,7 @@ bool compararPorPotencia(Equipamento a, Equipamento b){
     return a.getPotencia()<b.getPotencia();
 }
 
-void Grupo_Equipamento::salvarDados(QString file)
+void Grupo_Equipamento::salvarDados(QString file) // Salva os dados do arquivo
 {
     QFile arquivo(file);
 
@@ -71,7 +71,7 @@ void Grupo_Equipamento::salvarDados(QString file)
 }
 
 
-void Grupo_Equipamento::carregarDados(QString file)
+void Grupo_Equipamento::carregarDados(QString file)  // Carrega os dados do arquivo
 {
     QFile arquivo(file);
     arquivo.open(QIODevice::ReadOnly);
@@ -85,14 +85,13 @@ void Grupo_Equipamento::carregarDados(QString file)
         dados = linha.split(",");
         casa.setEquipamento(dados[0]);
         casa.setPotencia(dados[1].toFloat());
-        //casa.calcularEnergia(dados[2].toFloat());
         inserirCadastro(casa);
     }
     arquivo.close();
 
 }
 
-void Grupo_Equipamento::remover(int i){
+void Grupo_Equipamento::remover(int i){ // remover item da lista
 
     casa.erase(casa.begin()+i);
 }

@@ -78,7 +78,7 @@ void Equipamento::setTarifa(const float &valeu)
 }
 
 
-float Equipamento::calcularEnergia(){
+float Equipamento::calcularEnergia(){ //Calcula energia
 
 
     return (potencia*tarifa*tempo)/1000;

@@ -56,7 +56,9 @@ private:
     float calcularEnergia();
     void removeRow(int row);
      QMap <QString,QString> lista;
+     QMap<QString,QString>::iterator it;
      QVector<float> energia;
+     QVector<QString> equipamentos;
      Equipamento cadastro;
 };
 #endif // MAINWINDOW_H

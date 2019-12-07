@@ -18,9 +18,9 @@ private:
 
 public:
    Grupo_Equipamento();
-    double getMaiorPotencia();
-    double getMenorPotencia();
-    double getPotenciaMedia();
+    float getMaiorPotencia();
+    float getMenorPotencia();
+    float getPotenciaMedia();
     void inserirCadastro(Equipamento a);
     void ordenarPorNome();
     void ordenarPorPotencia();
