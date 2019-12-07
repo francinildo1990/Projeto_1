@@ -16,7 +16,7 @@
 ####     -Tarifa cobrada pela distribuidora na região
 ####     -Taxa de iluminação pública
 
-####     A conta de energia é faturada calculando o consumo mensal em KW/h, exemplificando se você utiliza um equipamento com potência de 60 W durante 60 min, você terá consumido 0,06 KW/h que é a potência consumida pelo seu aparelho, tal potência terá que ser multiplicada pelo valor do KW/h cobrado em sua região, resumindo obedece a seguinte fórmula;
+####     A conta de energia é faturada calculando o consumo mensal em KW/h, exemplificando se você utiliza um equipamento com potência de 60 W durante 60 min, você terá consumido 0,06 KW/h que é a potência consumida pelo seu aparelho, tal potência terá que ser multiplicada pelo valor do KW/h cobrado em sua região e somado com a taxa de iluminação local, resumindo obedece a seguinte fórmula;
 
 ###   E = (KW * (TEMPO DE CONSUMO) * (VALOR DO KW/h)) + TAXA DE ILUMINAÇÃO ; 
 
@@ -25,7 +25,7 @@
 ### Passo  2. Calcular uma estimativa da fatura do mês
 
 
-#### A estimativa da fatura tem como finalidade fornecer uma base de informações que permitirá ao usúario uma tomada de decisão, a parti de uma análise dessas informações pode se planejar uma ecônomia de uso dos aparelhos, ou a substituição visando uma maior eficiência de consumo.
+#### A estimativa da fatura tem como finalidade fornecer uma base de informações que permitirá ao usúario uma tomada de decisão, a parti de uma análise dessas informações o usúario poderá planejar uma estratégia ecônomia do uso dos aparelhos, ou a substituição visando uma maior eficiência de consumo.
 
 ####     -Resultado do consumo na tela
 
@@ -44,7 +44,7 @@
 
 ## Fim do Algoritimo
 
-####  O programa fornece algumas funções aos usuários, além de cadastrar vários aparelhos, ele poderá deletar aparelhos da lista ou banco de dados, poderá ordenar a lista em ordem alfabética ou segundo a potência do aparelho.
+####  O programa fornece algumas funções aos usuários, além de cadastrar vários aparelhos, ele poderá deletar aparelhos da lista, poderá ordenar a lista em ordem alfabética ou segundo a potência do aparelho.
 ![GitHub Logo](imagens/REMOVER.JPG )
 
 ###     -Na segunda aba está localizado os dados que mostram as estatísticas do processo
@@ -55,7 +55,7 @@
    
    ![GitHub Logo](imagens/DADOS.JPG )
    
-  ####          -Por fim o app é direcionado para aqueles que desejam obter um maior controle sobre a conta de energia, evitando assim o seu dispedicío.
+  ####          -Por fim o aplicativo é direcionado para aqueles que desejam obter um maior controle sobre sua conta de energia, evitando assim prejuizos de ordem econônica.
   
  ## Obrigado!
             
