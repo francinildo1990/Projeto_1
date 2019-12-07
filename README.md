@@ -20,7 +20,7 @@
 
 ###   E = (KW * (TEMPO DE CONSUMO) * (VALOR DO KW/h)) + TAXA DE ILUMINAÇÃO ; 
 
-![GitHub Logo](imagens/imagemPrincipal.JPG )
+![GitHub Logo](imagens/ImagemPrincipal.JPG )
 
 ### Passo  2. Calcular uma estimativa da fatura do mês
 
@@ -29,7 +29,7 @@
 
 ####     -Resultado do consumo na tela
 
-![GitHub Logo](imagens/energia.JPG )
+![GitHub Logo](imagens/Energia.JPG )
 
 ### Passo 3. Verificar se está dentro de uma faixa próxima da sua conta de energia real
 
