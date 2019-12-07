@@ -20,7 +20,7 @@
 
 ###   E = (KW * (TEMPO DE CONSUMO) * (VALOR DO KW/h)) + TAXA DE ILUMINAÇÃO ; 
 
-![GitHub Logo](imagens/Tela_1.JPG )
+![GitHub Logo](imagens/ImagemPrincipal.JPG )
 
 ### Passo  2. Calcular uma estimativa da fatura do mês
 
@@ -29,7 +29,7 @@
 
 ####     -Resultado do consumo na tela
 
-![GitHub Logo](imagens/CALCULAR_CONSUMO.JPG )
+![GitHub Logo](imagens/Energia.JPG )
 
 ### Passo 3. Verificar se está dentro de uma faixa próxima da sua conta de energia real
 
@@ -45,7 +45,7 @@
 ## Fim do Algoritimo
 
 ####  O programa fornece algumas funções aos usuários, além de cadastrar vários aparelhos, ele poderá deletar aparelhos da lista, poderá ordenar a lista em ordem alfabética ou segundo a potência do aparelho.
-![GitHub Logo](imagens/REMOVER.JPG )
+![GitHub Logo](imagens/RemoverFinal.JPG )
 
 ###     -Na segunda aba está localizado os dados que mostram as estatísticas do processo
   ####          -Tais como:
